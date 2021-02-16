@@ -1,5 +1,13 @@
 # Machine Translation Corpus for Turkic Languages
 
+Languages with most critical need for MT technologies: **Karakalpak, Chuvash, Bashkir, Crimean Tatar, Sakha, Kumyk** etc
+
+
+
+
+
+
+
 |     | src   | tgt   |    train |   dev |   bible |   ted |   x-wmt |
 |----:|:------|:------|---------:|------:|--------:|------:|--------:|
 |   0 | en    | tr    | 37105506 |  5000 |    1263 |  5381 |     700 |
