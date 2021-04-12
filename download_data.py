@@ -2,17 +2,18 @@ import sys
 import requests
 import zipfile
 import os
-base_url = "https://google.com"
+base_url = "gs://til-corpus/corpus"
 
 # all the langs present in the corpus
 langs = ['alt', 'az', 'ba', 'cjs', 'crh', 'cv', 'gag', 'kaa', 'kjh', 'kk', 'krc', 'kum', 'ky', 'sah', 'slr', 'tk', 'tr', 'tt', 'tyv', 'ug', 'uum', 'uz', 'en', 'ru']
 
 # downloads a zip file given a url
-def download_url(url, save_path, chunk_size=128):
-    r = requests.get(url, stream=True)
-    with open(save_path, 'wb') as fd:
-        for chunk in r.iter_content(chunk_size=chunk_size):
-            fd.write(chunk)
+def download_url(url, save_path):
+    try:
+        os.system(f"gsutil -m cp -r {url} {save_path}")
+    except CommandException as e:
+        print("Requested test files are not found!")
+    
 
 def unzip(path_to_zip_file, directory_to_extract_to):
     with zipfile.ZipFile(path_to_zip_file, 'r') as zip_ref:
@@ -34,6 +35,7 @@ if __name__ == "__main__":
         os.mkdir(f"data/{source}-{target}")
         os.mkdir(f"data/{source}-{target}/train")
         os.mkdir(f"data/{source}-{target}/dev")
+        os.mkdir(f"data/{source}-{target}/test")
         os.mkdir(f"data/{source}-{target}/test/bible")
         os.mkdir(f"data/{source}-{target}/test/ted")
         os.mkdir(f"data/{source}-{target}/test/x-wmt")
@@ -50,31 +52,37 @@ if __name__ == "__main__":
 
     # download all the needed data
     print("Downloading train files...")
-    download_url(train_path, save_path + f"train/{source}-{target}.zip")
+    download_url(train_path, save_path + f"train/")
+    
     print("Downloading dev files...")
-    download_url(dev_path, save_path + f"dev/{source}-{target}.zip")
-    print("Downloading test files...")
-    download_url(test_bible_path, save_path + f"test/bible/{source}-{target}.zip")
-    download_url(test_ted_path, save_path + f"test/ted/{source}-{target}.zip")
-    download_url(test_x_wmt_path, save_path + f"test/ted/{source}-{target}.zip")
+    download_url(dev_path, save_path + f"dev/")
 
-    # unzip all the data
-    print("Unzipping...")
-    unzip(f"data/{source}-{target}/train/{source}-{target}.zip", f"data/{source}-{target}/train/{source}-{target}")
+    print("Downloading bible test files...")
+    download_url(test_bible_path, save_path + f"test/bible/")
+    
+    print("Downloading ted talk test files...")
+    download_url(test_ted_path, save_path + f"test/ted/")
+    
+    print("Downloading x-wmt test files...")
+    download_url(test_x_wmt_path, save_path + f"test/x-wmt/")
+    
+    # # unzip all the data
+    # print("Unzipping...")
+    # unzip(f"data/{source}-{target}/train/{source}-{target}.zip", f"data/{source}-{target}/train/{source}-{target}")
 
-    unzip(f"data/{source}-{target}/dev/{source}-{target}.zip", f"data/{source}-{target}/dev/{source}-{target}")
+    # unzip(f"data/{source}-{target}/dev/{source}-{target}.zip", f"data/{source}-{target}/dev/{source}-{target}")
 
-    unzip(f"data/{source}-{target}/test/bible/{source}-{target}.zip", f"data/{source}-{target}/test/bible/{source}-{target}")
-    unzip(f"data/{source}-{target}/test/ted/{source}-{target}.zip", f"data/{source}-{target}/test/ted/{source}-{target}")
-    unzip(f"data/{source}-{target}/test/x-wmt/{source}-{target}.zip", f"data/{source}-{target}/test/x-wmt/{source}-{target}")
+    # unzip(f"data/{source}-{target}/test/bible/{source}-{target}.zip", f"data/{source}-{target}/test/bible/{source}-{target}")
+    # unzip(f"data/{source}-{target}/test/ted/{source}-{target}.zip", f"data/{source}-{target}/test/ted/{source}-{target}")
+    # unzip(f"data/{source}-{target}/test/x-wmt/{source}-{target}.zip", f"data/{source}-{target}/test/x-wmt/{source}-{target}")
 
-    # remove the zip files after the unzip is done
-    print("Removing zip files...")
-    os.system(f"rm data/{source}-{target}/train/{source}-{target}.zip")
-    os.system(f"rm data/{source}-{target}/dev/{source}-{target}.zip")
-    os.system(f"rm data/{source}-{target}/test/bible/{source}-{target}.zip")
-    os.system(f"rm data/{source}-{target}/test/ted/{source}-{target}.zip")
-    os.system(f"rm data/{source}-{target}/test/x-wmt/{source}-{target}.zip")
+    # # remove the zip files after the unzip is done
+    # print("Removing zip files...")
+    # os.system(f"rm data/{source}-{target}/train/{source}-{target}.zip")
+    # os.system(f"rm data/{source}-{target}/dev/{source}-{target}.zip")
+    # os.system(f"rm data/{source}-{target}/test/bible/{source}-{target}.zip")
+    # os.system(f"rm data/{source}-{target}/test/ted/{source}-{target}.zip")
+    # os.system(f"rm data/{source}-{target}/test/x-wmt/{source}-{target}.zip")
 
 
     
