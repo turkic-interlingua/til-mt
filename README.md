@@ -2,6 +2,12 @@
 
 Languages with most critical need for MT technologies: **Karakalpak, Chuvash, Bashkir, Crimean Tatar, Sakha, Kumyk** etc
 
+## Download the data
+To get started, download the data for a pair that you are interested
+```
+python download_data.py <source_language_code> <target_language_code>
+```
+
 
 |     | source          | target          | pair    |    train |   dev |   bible |   ted |   x-wmt |
 |----:|:----------------|:----------------|:--------|---------:|------:|--------:|------:|--------:|
