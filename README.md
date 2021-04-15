@@ -19,7 +19,7 @@ bash train_baseline.sh <source_language> <target_language>
 ### Download the data
 To get started, download the data for a pair that you are interested
 ```
-python download_data.py <source_language_code> <target_language_code>
+python download_data.py --source_language=<language code> --target_language=<language_code> --split=<train,dev,test,all>
 ```
 
 ### Install JoeyNMT
