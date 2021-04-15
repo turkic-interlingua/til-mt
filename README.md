@@ -1,13 +1,36 @@
 # Machine Translation Corpus for Turkic Languages
 
-Languages with most critical need for MT technologies: **Karakalpak, Chuvash, Bashkir, Crimean Tatar, Sakha, Kumyk** etc
+## Getting started
 
-## Download the data
+### Simplest option!
+Install the necessary libraries
+```
+pip install -r requirements.txt
+```
+
+Run the baseline script by passing in two language codes. This will automatically download the data, process it, install the necesssary libraries and framework and start the training process. The script assumes you are on a GPU-enabled device with CUDA support.
+
+```
+bash train_baseline.sh <source_language> <target_language>
+```
+
+## Useful scripts
+
+### Download the data
 To get started, download the data for a pair that you are interested
 ```
 python download_data.py <source_language_code> <target_language_code>
 ```
 
+### Install JoeyNMT
+
+```
+git clone https://github.com/joeynmt/joeynmt.git
+cd joeynmt; pip3 install .
+pip install torch==1.8.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+Languages with most critical need for MT technologies: **Karakalpak, Chuvash, Bashkir, Crimean Tatar, Sakha, Kumyk** etcss
 
 |     | source          | target          | pair    |    train |   dev |   bible |   ted |   x-wmt |
 |----:|:----------------|:----------------|:--------|---------:|------:|--------:|------:|--------:|
