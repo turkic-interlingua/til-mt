@@ -16,7 +16,7 @@ To access the snapshot of the corpus used to produce the results, use this link.
 
 ## Hyperparameters
 
-We refer the reader to Section 4.1 for exact hyperparameters for the specific set of language pairs. The baselines script provided assumes a "medium-resource" language pair and uses the corresponding hyperparameteres. 
+We refer the reader to Section 4.1 for exact hyperparameters for the specific set of language pairs. The baselines script provided assumes a "medium-resource" language pair and uses the corresponding hyperparameters. 
 
 
 ##
