@@ -4,7 +4,7 @@
 
 ### Simplest option!
 Install the necessary libraries
-```python
+```
 pip install -r requirements.txt
 ```
 
@@ -18,7 +18,7 @@ bash train_baseline.sh <source_language> <target_language>
 
 ### Download the data
 To get started, download the data for a pair that you are interested
-```
+```python
 python download_data.py --source_language=<language code> --target_language=<language_code> --split=<train,dev,test,all>
 ```
 
