@@ -4,7 +4,7 @@
 
 ### Simplest option!
 Install the necessary libraries
-```
+```python
 pip install -r requirements.txt
 ```
 
