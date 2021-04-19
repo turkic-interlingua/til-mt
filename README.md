@@ -37,10 +37,10 @@ cd joeynmt; pip3 install .
 pip install torch==1.8.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
-Languages with most critical need for MT technologies: **Karakalpak, Chuvash, Bashkir, Crimean Tatar, Sakha, Kumyk** etcss
+Languages with most critical need for MT technologies: **Karakalpak, Chuvash, Bashkir, Crimean Tatar, Sakha, Kumyk** etc.
 
 |     | source          | target          | pair    |    train |   dev |   bible |   ted |   x-wmt |
-|----:|:----------------|:----------------|:--------|---------:|------:|--------:|------:|--------:|
+|:---:|:----------------|:----------------|:-------:|:---------|:-----:|:-------:|:-----:|:-------:|
 |   0 | English         | Turkish         | en-tr   | 37105506 |  5000 |    1263 |  5381 |     700 |
 |   1 | Turkish         | English         | tr-en   | 37105506 |  5000 |    1263 |  5381 |     700 |
 |   2 | Turkish         | Russian         | tr-ru   | 14973420 |  5000 |    1086 |  5297 |     700 |
