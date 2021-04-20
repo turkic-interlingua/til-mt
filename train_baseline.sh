@@ -7,7 +7,7 @@ git clone https://github.com/joeynmt/joeynmt.git
 pip3 install joeynmt/.
 pip install torch==1.8.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 
-python3 download_data.py $SRC $TGT
+python3 download_data.py --source_language $SRC --target_language $TGT
 
 sudo chmod 777 joeynmt/scripts/build_vocab.py
 
