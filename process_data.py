@@ -15,7 +15,7 @@ experiment_name = "bilingual_baseline"
 experiment_folder = f"experiments/{source_language}-{target_language}-{experiment_name}"
 
 if not os.path.isdir(experiment_folder):
-    os.mkdir(experiment_folder)
+    os.makedirs(experiment_folder)
 
 def load_data(folder):
     source_path = f"{folder}/{source_language}-{target_language}/{source_language}-{target_language}.{source_language}" 

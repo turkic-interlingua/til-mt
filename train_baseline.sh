@@ -13,4 +13,4 @@ sudo chmod 777 joeynmt/scripts/build_vocab.py
 
 python3 process_data.py $SRC $TGT
 
-cd joeynmt; python3 -m joeynmt train configs/transformers_$SRC$TGT.yaml
+cd joeynmt; python3 -m joeynmt train configs/transformer_$SRC$TGT.yaml
