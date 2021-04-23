@@ -1,10 +1,12 @@
 # Machine Translation Corpus for Turkic Languages
 
-<kbd>
+
 <p align="center">
+<kbd>
   <img width="300" height="300" src="./logo.jpg">
+  </kbd>
 </p>
-</kbd>
+
 
 ## Getting started
 
