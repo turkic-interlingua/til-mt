@@ -1,4 +1,7 @@
 # Machine Translation Corpus for Turkic Languages
+![alt text][logo]
+
+[logo]: ./logo.jpg "Logo"
 
 ## Getting started
 
