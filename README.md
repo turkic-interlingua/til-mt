@@ -1,7 +1,8 @@
 # Machine Translation Corpus for Turkic Languages
-![alt text][logo]
 
-[logo]: ./logo.jpg "Logo"
+<p align="center">
+  <img width="300" height="300" src="./logo.jpg">
+</p>
 
 ## Getting started
 
