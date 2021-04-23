@@ -14,6 +14,23 @@ Run the baseline script by passing in two language codes. This will automaticall
 bash train_baseline.sh <source_language> <target_language>
 ```
 
+### Visualize your results
+
+Make sure *tensorboard* is installed and launch the visualization server (for example for **uz** and **ru**):
+
+```
+pip install tensorboard
+
+tensorboard --logdir=experiments/uz-ru-bilingual_baseline/models/uzru_transformer/tensorboard
+```
+
+After launching the visualization server, you can view your visualizations in a web browser at http://localhost:6006.
+
+You should see something like this:
+![alt text][tensorboard]
+
+[tensorboard]: ./tb_train_metrics.png "Tensorboard example"
+
 ## Useful scripts
 
 ### Download the parallel data
