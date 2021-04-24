@@ -11,6 +11,8 @@
 ## Getting started
 
 ### Simplest option!
+
+#### If you are using GPU-enabled (local) machine
 Install the necessary libraries
 ```
 pip install -r requirements.txt
@@ -21,6 +23,10 @@ Run the baseline script by passing in two language codes. This will automaticall
 ```
 bash train_baseline.sh <source_language> <target_language>
 ```
+
+#### If you are using free preemptible GPUs on Google Colab
+You can download the file `joeynmt_colab_bilingual.ipynb` and upload it onto the Google Colab system. You can change the languages codes in the script and the data will be automatically downloaded. It is recommended that you connect your Google Drive account to the Colab to save your progress. Google Colab deletes everything from its workspace periodically (~12 hours). 
+
 
 ### Visualize your results
 
