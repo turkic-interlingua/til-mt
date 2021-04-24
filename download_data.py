@@ -25,6 +25,10 @@ def create_folder(source, target, split):
 
     if not os.path.isdir(f"data/{source}-{target}/{split}"):
         os.makedirs(f"data/{source}-{target}/{split}")
+        return True
+    else:
+        print(f"{split} data already exists! Skipping...")
+        return False
     
     
 
@@ -67,25 +71,22 @@ if __name__ == "__main__":
         save_path = f"data/{source}-{target}/"
 
         if split == "test":
-            create_folder(source, target, split + "/bible")
-            create_folder(source, target, split + "/ted")
-            create_folder(source, target, split + "/x-wmt")
-        
-            test_bible_path = f"{base_url}/test/bible/{source}-{target}"
-            test_ted_path = f"{base_url}/test/ted/{source}-{target}"
-            test_x_wmt_path = f"{base_url}/test/x-wmt/{source}-{target}"
+            if create_folder(source, target, split + "/bible"):
+                test_bible_path = f"{base_url}/test/bible/{source}-{target}"
+                print("Downloading bible test files...")
+                download_url(test_bible_path, save_path + f"test/bible/")
 
-            print("Downloading bible test files...")
-            download_url(test_bible_path, save_path + f"test/bible/")
-    
-            print("Downloading ted talk test files...")
-            download_url(test_ted_path, save_path + f"test/ted/")
-    
-            print("Downloading x-wmt test files...")
-            download_url(test_x_wmt_path, save_path + f"test/x-wmt/")
+            if create_folder(source, target, split + "/ted"):
+                test_ted_path = f"{base_url}/test/ted/{source}-{target}"
+                print("Downloading ted talk test files...")
+                download_url(test_ted_path, save_path + f"test/ted/")
+
+            if create_folder(source, target, split + "/x-wmt"):
+                test_x_wmt_path = f"{base_url}/test/x-wmt/{source}-{target}"
+                print("Downloading x-wmt test files...")
+                download_url(test_x_wmt_path, save_path + f"test/x-wmt/")
     
         else:
-
             download_path = f"{base_url}/{split}/{source}-{target}"
             print(f"Downloading {split} files...")
             download_url(download_path, save_path + f"{split}/")

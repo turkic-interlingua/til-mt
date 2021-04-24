@@ -114,7 +114,7 @@ def build_config():
         eval_batch_type: "token"
         batch_multiplier: 8
         early_stopping_metric: "ppl"
-        epochs: 3000                     
+        epochs: 3000                    
         validation_freq: 500          
         logging_freq: 100
         eval_metric: "bleu"
