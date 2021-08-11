@@ -49,18 +49,18 @@ def build_subword_bpe():
         os.makedirs(data_path)
 
     print("learning bpe on the train files...")
-    os.system(f"subword-nmt learn-joint-bpe-and-vocab --input train.{source_language} train.{target_language} -s 4000 -o {data_path}/bpe.codes.4000 --write-vocabulary vocab.{source_language} vocab.{target_language}")
+    os.system(f"subword-nmt learn-joint-bpe-and-vocab --input data/train/en-tr/en-tr.{source_language} data/train/en-tr/en-tr.{target_language} -s 32000 -o {data_path}/bpe.codes.32000 --write-vocabulary vocab.{source_language} vocab.{target_language}")
 
     print("applying the bpe files to the data...")
     # Apply BPE splits to the development and test data.
-    os.system(f"subword-nmt apply-bpe -c {data_path}/bpe.codes.4000 --vocabulary vocab.{source_language} < train.{source_language} > {data_path}/train.bpe.{source_language}")
-    os.system(f"subword-nmt apply-bpe -c {data_path}/bpe.codes.4000 --vocabulary vocab.{target_language} < train.{target_language} > {data_path}/train.bpe.{target_language}")
+    os.system(f"subword-nmt apply-bpe -c {data_path}/bpe.codes.32000 --vocabulary vocab.{source_language} < data/train/en-tr/en-tr.{source_language} > {data_path}/train.bpe.{source_language}")
+    os.system(f"subword-nmt apply-bpe -c {data_path}/bpe.codes.32000 --vocabulary vocab.{target_language} < data/train/en-tr/en-tr.{target_language} > {data_path}/train.bpe.{target_language}")
 
-    os.system(f"subword-nmt apply-bpe -c {data_path}/bpe.codes.4000 --vocabulary vocab.{source_language} < dev.{source_language} > {data_path}/dev.bpe.{source_language}")
-    os.system(f"subword-nmt apply-bpe -c {data_path}/bpe.codes.4000 --vocabulary vocab.{target_language} < dev.{target_language} > {data_path}/dev.bpe.{target_language}")
+    os.system(f"subword-nmt apply-bpe -c {data_path}/bpe.codes.32000 --vocabulary vocab.{source_language} < data/dev/en-tr/en-tr.{source_language} > {data_path}/dev.bpe.{source_language}")
+    os.system(f"subword-nmt apply-bpe -c {data_path}/bpe.codes.32000 --vocabulary vocab.{target_language} < data/dev/en-tr/en-tr.{target_language} > {data_path}/dev.bpe.{target_language}")
     
-    os.system(f"subword-nmt apply-bpe -c {data_path}/bpe.codes.4000 --vocabulary vocab.{source_language} < test.{source_language} > {data_path}/test.bpe.{source_language}")
-    os.system(f"subword-nmt apply-bpe -c {data_path}/bpe.codes.4000 --vocabulary vocab.{target_language} < test.{target_language} > {data_path}/test.bpe.{target_language}")
+    os.system(f"subword-nmt apply-bpe -c {data_path}/bpe.codes.32000 --vocabulary vocab.{source_language} < data/test/en-tr/en-tr.{source_language} > {data_path}/test.bpe.{source_language}")
+    os.system(f"subword-nmt apply-bpe -c {data_path}/bpe.codes.32000 --vocabulary vocab.{target_language} < data/test/en-tr/en-tr.{target_language} > {data_path}/test.bpe.{target_language}")
     
     os.system(f"joeynmt/scripts/build_vocab.py joeynmt/data/{source_language}{target_language}/train.bpe.{source_language} joeynmt/data/{source_language}{target_language}/train.bpe.{target_language} --output_path joeynmt/data/{source_language}{target_language}/vocab.txt")
 
@@ -115,14 +115,14 @@ def build_config():
         batch_multiplier: 8
         early_stopping_metric: "ppl"
         epochs: 3000                    
-        validation_freq: 500          
+        validation_freq: 2500          
         logging_freq: 100
         eval_metric: "bleu"
         model_dir: "{experiment_folder}/models/{name}_transformer"
         overwrite: True              # TODO: Set to True if you want to overwrite possibly existing models. 
         shuffle: True
         use_cuda: True
-        fp16: False
+        fp16: True
         max_output_length: 128
         print_valid_sents: [0, 1, 2, 3]
         keep_last_ckpts: 3
@@ -174,35 +174,35 @@ def clean_up():
     
 print("\nstarting to load the data...")
 
-df = load_data(f"data/{source_language}-{target_language}/train")
-df_dev = load_data(f"data/{source_language}-{target_language}/dev")
-df_test_bible = load_data(f"data/{source_language}-{target_language}/test/bible")
-#df_test_ted = load_data(f"data/{source_language}-{target_language}/test/ted")
-#df_test_xwmt = load_data(f"data/{source_language}-{target_language}/test/xwmt")
+# df = load_data(f"data/train/{source_language}-{target_language}")
+# df_dev = load_data(f"data/dev/{source_language}-{target_language}")
+# df_test = load_data(f"data/test{source_language}-{target_language}")
+# #df_test_ted = load_data(f"data/{source_language}-{target_language}/test/ted")
+# #df_test_xwmt = load_data(f"data/{source_language}-{target_language}/test/xwmt")
 
-print("train samples...")
-print(df.head())
-print("dev samples...")
-print(df_dev.head())
-print("test (bible) samples...")
-print(df_test_bible.head())
+# print("train samples...")
+# print(df.head())
+# print("dev samples...")
+# print(df_dev.head())
+# print("test (bible) samples...")
+# print(df_test_bible.head())
 
 
-print("\nwriting the tokenized data to files...")
-with open("train."+source_language, "w") as src_file, open("train."+target_language, "w") as trg_file:
-  for index, row in df.iterrows():
-    src_file.write(row["source_sentence"] + "\n")
-    trg_file.write(row["target_sentence"] + "\n")
+# print("\nwriting the tokenized data to files...")
+# with open("train."+source_language, "w") as src_file, open("train."+target_language, "w") as trg_file:
+#   for index, row in df.iterrows():
+#     src_file.write(row["source_sentence"] + "\n")
+#     trg_file.write(row["target_sentence"] + "\n")
     
-with open("dev."+source_language, "w") as src_file, open("dev."+target_language, "w") as trg_file:
-  for index, row in df_dev.iterrows():
-    src_file.write(row["source_sentence"] + "\n")
-    trg_file.write(row["target_sentence"] + "\n")
+# with open("dev."+source_language, "w") as src_file, open("dev."+target_language, "w") as trg_file:
+#   for index, row in df_dev.iterrows():
+#     src_file.write(row["source_sentence"] + "\n")
+#     trg_file.write(row["target_sentence"] + "\n")
   
-with open("test."+source_language, "w") as src_file, open("test."+target_language, "w") as trg_file:
-  for index, row in df_test_bible.iterrows():
-    src_file.write(row["source_sentence"] + "\n")
-    trg_file.write(row["target_sentence"] + "\n")
+# with open("test."+source_language, "w") as src_file, open("test."+target_language, "w") as trg_file:
+#   for index, row in df_test_bible.iterrows():
+#     src_file.write(row["source_sentence"] + "\n")
+#     trg_file.write(row["target_sentence"] + "\n")
 
 
 print("\nstarting to create BPE splits...")

@@ -20,3 +20,4 @@ python3 process_data.py $SRC $TGT
 
 # start the training process
 cd joeynmt; python3 -m joeynmt train configs/transformer_$SRC$TGT.yaml
+#CUDA_VISIBLE_DEVICES=2,3 python3 -m joeynmt train configs/transformer_tren.yaml
