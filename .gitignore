@@ -1,0 +1,7 @@
+data/
+joeynmt/
+monolingual/
+finetune/checkpoints/
+fairseq-env/
+experiments/
+fairseq-env/
