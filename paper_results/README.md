@@ -28,7 +28,6 @@ We refer the reader to Section 4.1 for exact hyperparameters for the specific se
 | Ted Talks                                |      https://www.ted.com/participate/translate/our-languages    | az, en, kk, ky, ru, tt, tr, tt, uz, ug   |      ~600k |  https://www.ted.com/about/our-organization/our-policies-terms/ted-com-terms-of-use    |
 | Mozilla    |          | az, ba, cv, en, kk, ky, sah, tk, tt, ug, uz, tr, ru          |      ~300 per direction |  https://www.mozilla.org/en-US/about/legal/terms/mozilla/    |
 | Azerbaijani News    |    https://github.com/derintelligence/en-az-parallel-corpus      | az, en |      ~68k | Author's permission |
-
 | Uzbek/English News   |   https://data.gov.uz/,  https://president.uz/, https://uz.usembassy.gov/,  https://www.gov.uz/,      | uz, en |      ~60k |  |
 | Uzbekistan Legislative Dataset (Law)   |    https://lex.uz/  | uz, ru, en |      ~1.5m |  |
 | KhanAcademy Project Translations (Math/Science)   |    https://uz.khanacademy.org/ | uz, en |      ~200k | Author's permission |
