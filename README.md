@@ -17,6 +17,43 @@
 6. [Language pairs and data sizes in TIL Corpus](#Language-pairs)
 
 
+
+## Useful scripts
+
+### Download the parallel data
+To get started, download the data for a pair that you are interested
+```
+python download_data.py --source_language=<language code> --target_language=<language_code> --split=<train,dev,test,all>
+```
+
+### Download the monolingual data
+You can also download monolingual data for any of the languages in the table below. Monolingual data are crawled from our parallel corpus, Wikipedia dumps, news websites and a few manual crawls whenever possible.
+
+```
+python download_monolingual.py --language=<language code>
+```
+
+
+## X-WMT Test Sets
+
+To establish a comprehensive and challenging evaluation benchmark for Machine Translation in Turkic languages, we translate a test set originally introduced in WMT 2020 News Translation Task for English-Russian. The [original dataset](https://www.statmt.org/wmt20/translation-task.html#download) is profesionally translated and consists of sentences from news articles that are both English and Russian-centric. We adopt this evaluation set (X-WMT) and begin efforts to translate it into several Turkic languages. The current version of X-WMT includes covers 8 Turkic languages and 88 language directions with a minimum of 300 sentences per language direction. Currently covered languages are Azerbaijani (az), Bashkir (ba), Karakalpak (kaa), Kazakh (kk), Kirghiz (ky), Turkish (tr), Sakha (sah) and Uzbek (uz). You can download the evaluation sets here.
+
+|     | *en*   | *ru*   | *ba*  | *tr*  | *uz*  | *ky*  | *kk*  | *az*  | *sah* | *kaa* |
+|-----|------|------|-----|-----|-----|-----|-----|-----|-----|-----|
+| *en*  | -    |      |     |     |     |     |     |     |     |     |
+| *ru*  | *1000* | -    |     |     |     |     |     |     |     |     |
+| *ba*  | 1000 | *1000* | -   |     |     |     |     |     |     |     |
+| *tr*  | *800*  | 800  | 800 | -   |     |     |     |     |     |     |
+| *uz*  | *900*  | 900  | 900 | 600 | -   |     |     |     |     |     |
+| *ky*  | 500  | *500*  | 500 | 400 | 500 | -   |     |     |     |     |
+| *kk*  | 700  | 700  | 700 | 500 | *700* | 500 | -   |     |     |     |
+| *az*  | *600*  | 600  | 600 | 500 | 600 | 500 | 500 | -   |     |     |
+| *sah* | 300  | *300*  | 300 | 300 | 300 | 300 | 300 | 300 | -   |     |
+| *kaa* | 300  | 300  | 300 | *300* | 300 | 300 | 300 | 300 | 300 | -   |
+
+
+Table above shows the amount of data available for each language pair. Bolded entries indicate the original translation direction. 
+
 ## Getting started
 
 ### Simplest option!
@@ -66,20 +103,6 @@ bash create_submission.sh joeynmt/configs/transformer_uzru.yaml uz ru
 
 The script will automatically download the needed test files, load the model specified in the config file, run the test and output the predictions under `\submissions` folder. 
 
-## Useful scripts
-
-### Download the parallel data
-To get started, download the data for a pair that you are interested
-```
-python download_data.py --source_language=<language code> --target_language=<language_code> --split=<train,dev,test,all>
-```
-
-### Download the monolingual data
-You can also download monolingual data for any of the languages in the table below. Monolingual data are crawled from our parallel corpus, Wikipedia dumps, news websites and a few manual crawls whenever possible.
-
-```
-python download_monolingual.py --language=<language code>
-```
 
 ### Install JoeyNMT
 

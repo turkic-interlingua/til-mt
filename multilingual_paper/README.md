@@ -1,7 +1,7 @@
 
 # Evaluating Multiway Multilingual NMT in Turkic Languages (WMT 2021)
 
-## Results (Bilingual vs MNMT)
+### Results (Bilingual vs MNMT)
 
 |        |            | In-Domain Test |      |       |      | X-WMT Test |      |       |      |
 |--------|------------|----------------|------|-------|------|------------|------|-------|------|
@@ -34,6 +34,9 @@
 | en-sah | 8.1K       | 13.45          | 0.36 | 4.98  | 0.18 | 0.04       | 0.14 | 3.46  | 0.12 |
 | sah-en | 8.1K       | 22.19          | 0.40 | 5.90  | 0.23 | 0.16       | 0.21 | 3.38  | 0.24 |
 
+
+
+### Reproducing the results from the paper
 
 1. Download the entire corpus
 
