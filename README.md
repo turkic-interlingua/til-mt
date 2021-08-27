@@ -89,7 +89,7 @@ cd joeynmt; pip3 install .
 pip install torch==1.8.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
-## How to cite the work?
+## How to cite
 
 If you are using the TIL Corpus or X-WMT test sets, please cite:
 
