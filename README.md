@@ -101,13 +101,14 @@ If you are using the MNMT model in your research, please cite:
 (here)
 
 If you want to talk about the Turkic Interlingua (TIL) community overall, please cite:
-
+```
 @phdthesis{mirzakhalov2021turkic,
   title={Turkic Interlingua: A Case Study of Machine Translation in Low-resource Languages},
   author={Mirzakhalov, Jamshidbek},
   year={2021},
   school={University of South Florida}
 }
+```
 
 ## Language pairs
 
