@@ -11,8 +11,9 @@
 
 1. [Large-scale Study of Machine Translation in Turkic Languages (EMNLP 2021)](https://github.com/turkic-interlingua/til-mt/tree/master/corpus_paper)
 2. [Evaluating Multiway Multilingual NMT in Turkic Languages (WMT 2021)](https://github.com/turkic-interlingua/til-mt/tree/master/multilingual_paper)
-3. [Finetuning the MNMT model on a downstream task](https://github.com/turkic-interlingua/til-mt/tree/master/finetune)
-4. Guide to getting started with the corpus and training your bilingual baselines (here!)
+3. [TIL Corpus and how to access it](#Download-the-parallel-data)
+4. [Finetuning the MNMT model on a downstream task](https://github.com/turkic-interlingua/til-mt/tree/master/finetune)
+5. Guide to getting started with the corpus and training your bilingual baselines (here!)
 
 
 ## Getting started
