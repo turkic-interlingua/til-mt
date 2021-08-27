@@ -11,16 +11,18 @@
 
 1. [Large-scale Study of Machine Translation in Turkic Languages (EMNLP 2021)](https://github.com/turkic-interlingua/til-mt/tree/master/corpus_paper)
 2. [Evaluating Multiway Multilingual NMT in Turkic Languages (WMT 2021)](https://github.com/turkic-interlingua/til-mt/tree/master/multilingual_paper)
-3. [TIL Corpus and how to access it](#Download-the-parallel-data)
-4. [Finetuning the MNMT model on a downstream task](https://github.com/turkic-interlingua/til-mt/tree/master/finetune)
-5. [Guide to getting started with the corpus and training your bilingual baselines](#Getting-started)
-6. [Language pairs and data sizes in TIL Corpus](#Language-pairs)
+3. [TIL Corpus and how to access it](#Download-the-TIL-corpus)
+4. [X-WMT Test Sets](#X-WMT-Test-Sets)
+5. [Finetuning the MNMT model on a downstream task](https://github.com/turkic-interlingua/til-mt/tree/master/finetune)
+6. [Guide to getting started with the corpus and training your bilingual baselines](#Getting-started)
+7. [How to cite the work?](#How-to-cite)
+8. [Language pairs and data sizes in TIL Corpus](#Language-pairs)
 
 
 
 ## Useful scripts
 
-### Download the parallel data
+### Download the TIL Corpus
 To get started, download the data for a pair that you are interested
 ```
 python download_data.py --source_language=<language code> --target_language=<language_code> --split=<train,dev,test,all>
