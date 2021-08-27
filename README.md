@@ -13,7 +13,8 @@
 2. [Evaluating Multiway Multilingual NMT in Turkic Languages (WMT 2021)](https://github.com/turkic-interlingua/til-mt/tree/master/multilingual_paper)
 3. [TIL Corpus and how to access it](#Download-the-parallel-data)
 4. [Finetuning the MNMT model on a downstream task](https://github.com/turkic-interlingua/til-mt/tree/master/finetune)
-5. Guide to getting started with the corpus and training your bilingual baselines (here!)
+5. [Guide to getting started with the corpus and training your bilingual baselines](#Getting-started)
+6. [Language pairs and data sizes in TIL Corpus](#Language-pairs)
 
 
 ## Getting started
@@ -87,6 +88,28 @@ git clone https://github.com/joeynmt/joeynmt.git
 cd joeynmt; pip3 install .
 pip install torch==1.8.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 ```
+
+## How to cite the work?
+
+If you are using the TIL Corpus or X-WMT test sets, please cite:
+
+(here)
+
+
+If you are using the MNMT model in your research, please cite:
+
+(here)
+
+If you want to talk about the Turkic Interlingua (TIL) community overall, please cite:
+
+@phdthesis{mirzakhalov2021turkic,
+  title={Turkic Interlingua: A Case Study of Machine Translation in Low-resource Languages},
+  author={Mirzakhalov, Jamshidbek},
+  year={2021},
+  school={University of South Florida}
+}
+
+## Language pairs
 
 | Rank | Source          | Target          | Source LC | Target LC | Training size |
 |------|-----------------|-----------------|-----------|-----------|---------------|
