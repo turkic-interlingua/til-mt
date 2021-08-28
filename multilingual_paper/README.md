@@ -1,6 +1,9 @@
 
 # Evaluating Multiway Multilingual NMT in Turkic Languages (WMT 2021)
 
+### Abstract
+Despite the increasing number of large and comprehensive machine translation (MT) systems, evaluation of these methods in various languages have been restrained by the lack of high-quality parallel corpora as well as engagement with the people that speak these languages. In this study, we present an evaluation of state-of-theart approaches to training and evaluating MT systems in 22 languages from the Turkic language family, most of which being extremely under-explored \cite{joshi2019unsung}. First we describe the curation of a large multi-way parallel corpus covering 22 languages in the study with training, development, and testing sets for over 400 translation directions. Second, we translate a test set from WMT 2020 News Translation Shared Task into 8 Turkic languages creating the first MT benchmark to evaluate these languages. Last, we train 26 bilingual baselines as well as a multi-way neural MT (MNMT) model using the corpus and perform an extensive analysis using automatic metrics as well as human evaluations. We find that the MNMT model outperforms almost all bilingual baselines in the out-of-domain test sets and fine tuning the model on a downstream task of a single pair also results in a huge performance boost in both low- and high-resource scenarios. Our attentive analysis of evaluation criteria for MT models in Turkic languages also points to the necessity in further research in this direction. We release the corpus, test sets as well as models to the public.  
+
 ### Results (Bilingual vs MNMT)
 
 |        |            | In-Domain Test |      |       |      | X-WMT Test |      |       |      |
