@@ -93,7 +93,7 @@ You should see something like this:
 
 [tensorboard]: ./tb_train_metrics.png "Tensorboard example"
 
-### Create a submission to the leaderboard
+<!-- ### Create a submission to the leaderboard
 
 Once you have your *amazing* model ready, you can create a submission (.zip file) by simply running `create_submission.sh` script along with some parameters:
 
@@ -103,7 +103,7 @@ bash create_submission.sh <path_to_joeynmt_config.yaml> <source_language_code> <
 bash create_submission.sh joeynmt/configs/transformer_uzru.yaml uz ru
 ```
 
-The script will automatically download the needed test files, load the model specified in the config file, run the test and output the predictions under `\submissions` folder. 
+The script will automatically download the needed test files, load the model specified in the config file, run the test and output the predictions under `\submissions` folder.  -->
 
 
 ### Install JoeyNMT
