@@ -22,7 +22,7 @@
 Turkic Interlingua (TIL) is a community of researchers, Machine Learning (ML) engineers, language enthusiasts and community leaders whose mission is to develop language technologies (from spell checkers to translation models), collect diverse datasets, and explore linguistic phenomena through the lens of academic research for Turkic languages.
 
 ### What is TIL Corpus?
-TIL Corpus is a large-scale parallel corpus combining most of the public datasets for 22 Turkic languages. The current version of the corpus yields data for almost 400 language directions with development and test sets available for >300 of them. TIL Corpus also includes a high-quality, human-translated X-WMT test sets covering 8 Turkic languages. You can learn more about the corpus and how to use it [here](https://github.com/turkic-interlingua/til-mt/tree/master/til_corpus).
+TIL Corpus is a large-scale parallel corpus combining most of the public datasets for 22 Turkic languages. The current version of the corpus yields data for almost 400 language directions with development and test sets available for >300 of them. You can learn more about the corpus and how to use it [here](https://github.com/turkic-interlingua/til-mt/tree/master/til_corpus).
 
 
 ### What is this repo?
