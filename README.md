@@ -1,4 +1,4 @@
-# Machine Translation Corpus for Turkic Languages
+# Machine Translation for Turkic Languages
 
 <p align="center">
 <kbd>
