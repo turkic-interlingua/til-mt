@@ -1,118 +1,28 @@
 # Machine Translation Corpus for Turkic Languages
 
-
 <p align="center">
 <kbd>
   <img width="300" height="300" src="./logo.jpg">
   </kbd>
 </p>
 
-## Contents
+## Table of Contents
 
-1. [Large-scale Study of Machine Translation in Turkic Languages (EMNLP 2021)](https://github.com/turkic-interlingua/til-mt/tree/master/corpus_paper)
-2. [Evaluating Multiway Multilingual NMT in Turkic Languages (WMT 2021)](https://github.com/turkic-interlingua/til-mt/tree/master/multilingual_paper)
-3. [TIL Corpus and how to access it](#Download-the-TIL-corpus)
-4. [X-WMT Test Sets](#X-WMT-Test-Sets)
+1. [Introduction](#Introduction)
+2. [TIL Corpus](https://github.com/turkic-interlingua/til-mt/tree/master/til_corpus)
+3. [Replicating Paper Results](https://github.com/turkic-interlingua/til-mt/tree/master/replicate_results)
+4. [X-WMT Test Sets](https://github.com/turkic-interlingua/til-mt/tree/master/test-xwmt)
 5. [Finetuning the MNMT model on a downstream task](https://github.com/turkic-interlingua/til-mt/tree/master/finetune)
-6. [Guide to getting started with the corpus and training your bilingual baselines](#Getting-started)
-7. [How to cite the work?](#How-to-cite)
-8. [Language pairs and data sizes in TIL Corpus](#Language-pairs)
+6. [How to cite the work?](#How-to-cite)
+7. [Language pairs and data sizes in TIL Corpus](#Language-pairs)
 
+## Introduction
 
+### What is Turkic Interlingua (TIL)?
+Turkic Interlingua (TIL) is a community of researchers, Machine Learning (ML) engineers, language enthusiasts and community leaders whose mission is to develop language technologies (from spell checkers to translation models), collect diverse datasets, and explore linguistic phenomena through the lens of academic research for Turkic languages.
 
-## Useful scripts
-
-### Download the TIL Corpus
-To get started, download the data for a pair that you are interested
-```
-python download_data.py --source_language=<language code> --target_language=<language_code> --split=<train,dev,test,all>
-```
-
-### Download the monolingual data
-You can also download monolingual data for any of the languages in the table below. Monolingual data are crawled from our parallel corpus, Wikipedia dumps, news websites and a few manual crawls whenever possible.
-
-```
-python download_monolingual.py --language=<language code>
-```
-
-
-## X-WMT Test Sets
-
-To establish a comprehensive and challenging evaluation benchmark for Machine Translation in Turkic languages, we translate a test set originally introduced in WMT 2020 News Translation Task for English-Russian. The [original dataset](https://www.statmt.org/wmt20/translation-task.html#download) is profesionally translated and consists of sentences from news articles that are both English and Russian-centric. We adopt this evaluation set (X-WMT) and begin efforts to translate it into several Turkic languages. The current version of X-WMT includes covers 8 Turkic languages and 88 language directions with a minimum of 300 sentences per language direction. Currently covered languages are Azerbaijani (az), Bashkir (ba), Karakalpak (kaa), Kazakh (kk), Kirghiz (ky), Turkish (tr), Sakha (sah) and Uzbek (uz). You can download the evaluation sets [here](https://drive.google.com/drive/folders/1SsG-dRDfMy1Ira3PP7TdXOPrKD8BK-Ln?usp=sharing).
-
-|     | **en**   | **ru**   | **ba**  | **tr**  | **uz**  | **ky**  | **kk**  | **az**  | **sah** | **kaa** |
-|-----|------|------|-----|-----|-----|-----|-----|-----|-----|-----|
-| **en**  | -    |      |     |     |     |     |     |     |     |     |
-| **ru**  | **1000** | -    |     |     |     |     |     |     |     |     |
-| **ba**  | 1000 | **1000** | -   |     |     |     |     |     |     |     |
-| **tr**  | **800**  | 800  | 800 | -   |     |     |     |     |     |     |
-| **uz**  | **900**  | 900  | 900 | 600 | -   |     |     |     |     |     |
-| **ky**  | 500  | **500**  | 500 | 400 | 500 | -   |     |     |     |     |
-| **kk**  | 700  | 700  | 700 | 500 | **700** | 500 | -   |     |     |     |
-| **az**  | **600**  | 600  | 600 | 500 | 600 | 500 | 500 | -   |     |     |
-| **sah** | 300  | **300**  | 300 | 300 | 300 | 300 | 300 | 300 | -   |     |
-| **kaa** | 300  | 300  | 300 | **300** | 300 | 300 | 300 | 300 | 300 | -   |
-
-
-Table above shows the amount of data available for each language pair. Bolded entries indicate the original translation direction. 
-
-## Getting started
-
-### Simplest option!
-
-#### If you are using GPU-enabled (local) machine
-Install the necessary libraries
-```
-pip install -r requirements.txt
-```
-
-Run the baseline script by passing in two language codes. This will automatically download the data, process it, install the necesssary libraries and framework and start the training process. The script assumes you are on a GPU-enabled device with CUDA support.
-
-```
-bash train_baseline.sh <source_language> <target_language>
-```
-
-#### If you are using free preemptible GPUs on Google Colab
-You can download the file `joeynmt_colab_bilingual.ipynb` and upload it onto the Google Colab system. You can change the languages codes in the script and the data will be automatically downloaded. It is recommended that you connect your Google Drive account to the Colab to save your progress. Google Colab deletes everything from its workspace periodically (~12 hours). 
-
-
-### Visualize your results
-
-Make sure *tensorboard* is installed and launch the visualization server (for example for **uz** and **ru**):
-
-```
-pip install tensorboard
-
-tensorboard --logdir=experiments/uz-ru-bilingual_baseline/models/uzru_transformer/tensorboard
-```
-
-After launching the visualization server, you can view your visualizations in a web browser at http://localhost:6006.
-
-You should see something like this:
-![alt text][tensorboard]
-
-[tensorboard]: ./tb_train_metrics.png "Tensorboard example"
-
-<!-- ### Create a submission to the leaderboard
-
-Once you have your *amazing* model ready, you can create a submission (.zip file) by simply running `create_submission.sh` script along with some parameters:
-
-```
-bash create_submission.sh <path_to_joeynmt_config.yaml> <source_language_code> <target_language_code>
-# For example:
-bash create_submission.sh joeynmt/configs/transformer_uzru.yaml uz ru
-```
-
-The script will automatically download the needed test files, load the model specified in the config file, run the test and output the predictions under `\submissions` folder.  -->
-
-
-### Install JoeyNMT
-
-```
-git clone https://github.com/joeynmt/joeynmt.git
-cd joeynmt; pip3 install .
-pip install torch==1.8.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
-```
+### What is this repo?
+This repo is a collection of resources for training and researching Machine Translation models. It includes links and scripts to download the TIL Corpus, X-WMT test sets, multilingual models and more. The repo also allows researchers to replicate our results from our publications in the past. 
 
 ## How to cite
 
