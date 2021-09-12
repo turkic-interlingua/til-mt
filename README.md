@@ -56,50 +56,50 @@ This project was carried out with the help and contributions from dozens of indi
 
 **Authors on the publications** (in alphabetical order)
 
-Abror Khaytbaev
-Ahsan Wahab
-Aigiz Kunafin
-Anoop Babu
-Antonio Laverghetta Jr.
-Behzod Moydinboyev
-Behzodbek Moydinboyev
-Dr. Duygu Ataman
-Esra Onal
-Dr. Francis Tyers
-Jamshidbek Mirzakhalov
-Dr. John Licato
-Dr. Julia Kreutzer
-Mammad Hajili
-Mokhiyakhon Uzokova,
-Dr. Orhan Firat
-Otabek Abduraufov
-Sardana Ivanova
-Shaxnoza Pulatova
-Sherzod Kariev
-Dr. Sriram Chellappan
+Abror Khaytbaev  
+Ahsan Wahab  
+Aigiz Kunafin  
+Anoop Babu  
+Antonio Laverghetta Jr.  
+Behzod Moydinboyev  
+Behzodbek Moydinboyev  
+Dr. Duygu Ataman  
+Esra Onal  
+Dr. Francis Tyers  
+Jamshidbek Mirzakhalov  
+Dr. John Licato  
+Dr. Julia Kreutzer  
+Mammad Hajili  
+Mokhiyakhon Uzokova  
+Dr. Orhan Firat  
+Otabek Abduraufov  
+Sardana Ivanova  
+Shaxnoza Pulatova  
+Sherzod Kariev  
+Dr. Sriram Chellappan  
 
 **Translators, annotators and dataset contributors** (in alphabetical order)
 
-Abilxayr Zholdybai
-Aigiz Kunafin
-Akylbek Khamitov
-Alperen Cantez
-Aydos Muxammadiyarov
-Doniyorbek Rafikjonov
-Erkinbek Vokhabov
-Ipek Baris
-Iskander Shakirov
-Madina Zokirjonova
-Mohiyaxon Uzoqova
-Mukhammadbektosh Khaydarov
-Nurlan Maharramli
-Petr Popov
-Rasul Karimov
-Sariya Kagarmanova
-Ziyodabonu Qobiljon qizi
+Abilxayr Zholdybai  
+Aigiz Kunafin  
+Akylbek Khamitov  
+Alperen Cantez  
+Aydos Muxammadiyarov  
+Doniyorbek Rafikjonov  
+Erkinbek Vokhabov  
+Ipek Baris  
+Iskander Shakirov  
+Madina Zokirjonova  
+Mohiyaxon Uzoqova  
+Mukhammadbektosh Khaydarov  
+Nurlan Maharramli  
+Petr Popov  
+Rasul Karimov  
+Sariya Kagarmanova  
+Ziyodabonu Qobiljon qizi  
 
 **Industry supporters**
 
-[Google Cloud](https://cloud.google.com/solutions/education)
-[Khan Academy Oʻzbek](https://uz.khanacademy.org/)
-[The Foundation for the Preservation and Development of the Bashkir Language](https://bsfond.ru/)
+[Google Cloud](https://cloud.google.com/solutions/education)  
+[Khan Academy Oʻzbek](https://uz.khanacademy.org/)  
+[The Foundation for the Preservation and Development of the Bashkir Language](https://bsfond.ru/)  
