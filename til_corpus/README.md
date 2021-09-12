@@ -1,7 +1,7 @@
 
 # TIL Corpus
 
-
+Our parallel corpus is collected through unifying publicly available datasets and additional parallel data we prepare by crawling public domain resources.
 
 
 ### Download the TIL Corpus
