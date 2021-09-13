@@ -29,6 +29,37 @@ TIL Corpus is a large-scale parallel corpus combining most of the public dataset
 This repo is a collection of resources for training and researching Machine Translation models. It includes links and scripts to download the TIL Corpus, X-WMT test sets, multilingual models and more. The repo also allows researchers to replicate our results from our publications in the past. 
 
 
+## Model results on the X-WMT test set 
+
+| **Pairs**  | **Train size** | **Bilingual** |       | **MNMT** |       | **Improvement** |        |
+|--------|------------|-----------|-------|------|-------|-------------|--------|
+|        |            | **Chrf**      | **BLEU**  | **Chrf** | **BLEU**  | **▲ Chrf**      | **▲ BLEU** |
+| ru-ba  | 523.7K     | 0.59      | 24.31 | 0.56 | 23.13 | -0.03       | -1.18  |
+| ba-ru  | 523.7K     | 0.58      | 24.39 | 0.57 | 24.57 | -0.02       | 0.18   |
+| en-tr  | 35.8M      | 0.55      | 16.04 | 0.56 | 26.74 | 0.01        | 10.70  |
+| tr-en  | 35.8M      | 0.51      | 20.39 | 0.55 | 24.66 | 0.04        | 4.27   |
+| az-tr  | 410.1K     | 0.43      | 10.61 | 0.48 | 19.63 | 0.05        | 9.02   |
+| kk-en  | 564.8K     | 0.42      | 12.00 | 0.44 | 15.71 | 0.02        | 3.71   |
+| az-en  | 548.9K     | 0.41      | 12.01 | 0.49 | 20.41 | 0.08        | 8.40   |
+| ru-uz  | 1.3M       | 0.41      | 6.58  | 0.42 | 6.70  | 0.01        | 0.12   |
+| en-kk  | 564.8K     | 0.40      | 7.82  | 0.43 | 9.92  | 0.03        | 2.10   |
+| en-uz  | 529.6K     | 0.40      | 6.34  | 0.42 | 9.89  | 0.02        | 3.55   |
+| tr-az  | 410.1K     | 0.39      | 7.78  | 0.42 | 8.21  | 0.03        | 0.43   |
+| en-az  | 548.9K     | 0.38      | 6.79  | 0.43 | 9.71  | 0.05        | 2.92   |
+| uz-ru  | 1.3M       | 0.36      | 6.08  | 0.39 | 9.16  | 0.03        | 3.08   |
+| ru-ky  | 293.7K     | 0.35      | 4.42  | 0.45 | 10.35 | 0.10        | 5.93   |
+| ky-ru  | 293.7K     | 0.30      | 5.23  | 0.44 | 14.08 | 0.14        | 8.85   |
+| ky-en  | 312.6K     | 0.29      | 4.65  | 0.39 | 10.87 | 0.10        | 6.22   |
+| en-ky  | 312.6K     | 0.27      | 2.33  | 0.34 | 4.64  | 0.07        | 2.31   |
+| uz-en  | 529.6K     | 0.24      | 4.81  | 0.45 | 14.45 | 0.21        | 9.64   |
+| kaa-en | 17.1K      | 0.21      | 1.04  | 0.38 | 10.21 | 0.17        | 9.17   |
+| sah-en | 8.1K       | 0.21      | 0.16  | 0.24 | 3.38  | 0.03        | 3.22   |
+| ba-en  | 34.3K      | 0.19      | 0.32  | 0.40 | 10.55 | 0.21        | 10.23  |
+| en-kaa | 17.1K      | 0.19      | 0.31  | 0.27 | 2.82  | 0.08        | 2.51   |
+| sah-ru | 9.2K       | 0.18      | 0.42  | 0.25 | 4.41  | 0.07        | 3.99   |
+| ru-sah | 9.2K       | 0.16      | 0.12  | 0.17 | 4.64  | 0.01        | 4.52   |
+| en-ba  | 34.3K      | 0.14      | 0.16  | 0.34 | 8.35  | 0.20        | 8.19   |
+| en-sah | 8.1K       | 0.14      | 0.04  | 0.12 | 3.46  | -0.02       | 3.42   |
 
 
 ## How to cite
