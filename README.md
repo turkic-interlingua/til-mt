@@ -32,7 +32,7 @@ This repo is a collection of resources for training and researching Machine Tran
 ## Model results on the X-WMT test set 
 
 | **Pairs**  | **Train size** | **Bilingual** |       | **MNMT** |       | **Improvement** |        |
-|--------|------------|-----------|-------|------|-------|-------------|--------|
+|:--------:|:------------:|:-----------:|:-------:|:------:|:-------:|:-------------:|:--------:|
 |        |            | **Chrf**      | **BLEU**  | **Chrf** | **BLEU**  | **▲ Chrf**      | **▲ BLEU** |
 | ru-ba  | 523.7K     | 0.59      | 24.31 | 0.56 | 23.13 | -0.03       | -1.18  |
 | ba-ru  | 523.7K     | 0.58      | 24.39 | 0.57 | 24.57 | -0.02       | 0.18   |
