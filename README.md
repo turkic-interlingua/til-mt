@@ -12,9 +12,9 @@
 2. [TIL Corpus](https://github.com/turkic-interlingua/til-mt/tree/master/til_corpus)
 3. [Replicating Paper Results](https://github.com/turkic-interlingua/til-mt/tree/master/replicate_results)
 4. [X-WMT Test Sets](https://github.com/turkic-interlingua/til-mt/tree/master/test-xwmt)
-5. [Finetuning the MNMT model on a downstream task](https://github.com/turkic-interlingua/til-mt/tree/master/finetune)
+5. [MNMT model](https://github.com/turkic-interlingua/til-mt/tree/master/finetune)
 6. [How to cite the work?](#How-to-cite)
-7. [Language pairs and data sizes in TIL Corpus](#Language-pairs)
+7. [Contributors](#Contributors)
 
 ## Introduction
 
@@ -29,12 +29,22 @@ TIL Corpus is a large-scale parallel corpus combining most of the public dataset
 This repo is a collection of resources for training and researching Machine Translation models. It includes links and scripts to download the TIL Corpus, X-WMT test sets, multilingual models and more. The repo also allows researchers to replicate our results from our publications in the past. 
 
 
+
+
 ## How to cite
 
 If you are using the TIL Corpus or X-WMT test sets, please cite:
 
-(here)
-
+```
+@misc{mirzakhalov2021largescale,
+      title={A Large-Scale Study of Machine Translation in the Turkic Languages}, 
+      author={Jamshidbek Mirzakhalov and Anoop Babu and Duygu Ataman and Sherzod Kariev and Francis Tyers and Otabek Abduraufov and Mammad Hajili and Sardana Ivanova and Abror Khaytbaev and Antonio Laverghetta Jr. au2 and Behzodbek Moydinboyev and Esra Onal and Shaxnoza Pulatova and Ahsan Wahab and Orhan Firat and Sriram Chellappan},
+      year={2021},
+      eprint={2109.04593},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
 
 If you are using the MNMT model in your research, please cite:
 
