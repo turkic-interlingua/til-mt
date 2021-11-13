@@ -67,19 +67,23 @@ This repo is a collection of resources for training and researching Machine Tran
 If you are using the TIL Corpus or X-WMT test sets, please cite:
 
 ```
-@misc{mirzakhalov2021largescale,
-      title={A Large-Scale Study of Machine Translation in the Turkic Languages}, 
-      author={Jamshidbek Mirzakhalov and Anoop Babu and Duygu Ataman and Sherzod Kariev and Francis Tyers and Otabek Abduraufov and Mammad Hajili and Sardana Ivanova and Abror Khaytbaev and Antonio Laverghetta Jr. au2 and Behzodbek Moydinboyev and Esra Onal and Shaxnoza Pulatova and Ahsan Wahab and Orhan Firat and Sriram Chellappan},
-      year={2021},
-      eprint={2109.04593},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{mirzakhalov2021large,
+  title={A Large-Scale Study of Machine Translation in Turkic Languages},
+  author={Mirzakhalov, Jamshidbek and Babu, Anoop and Ataman, Duygu and Kariev, Sherzod and Tyers, Francis and Abduraufov, Otabek and Hajili, Mammad and Ivanova, Sardana and Khaytbaev, Abror and Laverghetta Jr, Antonio and others},
+  booktitle={Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing},
+  pages={5876--5890},
+  year={2021}
 }
 ```
 
 If you are using the MNMT model in your research, please cite:
 
-(here)
+@article{mirzakhalov2021evaluating,
+  title={Evaluating Multiway Multilingual NMT in the Turkic Languages},
+  author={Mirzakhalov, Jamshidbek and Babu, Anoop and Kunafin, Aigiz and Wahab, Ahsan and Moydinboyev, Behzod and Ivanova, Sardana and Uzokova, Mokhiyakhon and Pulatova, Shaxnoza and Ataman, Duygu and Kreutzer, Julia and others},
+  journal={arXiv preprint arXiv:2109.06262},
+  year={2021}
+}
 
 If you want to talk about the Turkic Interlingua (TIL) community overall, please cite:
 ```
@@ -102,7 +106,6 @@ Ahsan Wahab
 Aigiz Kunafin  
 Anoop Babu  
 Antonio Laverghetta Jr.  
-Behzod Moydinboyev  
 Behzodbek Moydinboyev  
 Dr. Duygu Ataman  
 Esra Onal  
