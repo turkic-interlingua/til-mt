@@ -69,27 +69,9 @@ if __name__ == "__main__":
         
         # base save path
         save_path = f"data/{source}-{target}/"
-
-        if split == "test":
-            if create_folder(source, target, split + "/bible"):
-                test_bible_path = f"{base_url}/test/bible/{source}-{target}"
-                print("Downloading bible test files...")
-                download_url(test_bible_path, save_path + f"test/bible/")
-
-            if create_folder(source, target, split + "/ted"):
-                test_ted_path = f"{base_url}/test/ted/{source}-{target}"
-                print("Downloading ted talk test files...")
-                download_url(test_ted_path, save_path + f"test/ted/")
-
-            if create_folder(source, target, split + "/x-wmt"):
-                test_x_wmt_path = f"{base_url}/test/x-wmt/{source}-{target}"
-                print("Downloading x-wmt test files...")
-                download_url(test_x_wmt_path, save_path + f"test/x-wmt/")
-    
-        else:
-            download_path = f"{base_url}/{split}/{source}-{target}"
-            print(f"Downloading {split} files...")
-            download_url(download_path, save_path + f"{split}/")
+        download_path = f"{base_url}/{split}/{source}-{target}"
+        print(f"Downloading {split} files...")
+        download_url(download_path, save_path + f"{split}/")
 
  
 
