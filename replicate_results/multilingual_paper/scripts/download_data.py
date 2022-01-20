@@ -51,7 +51,7 @@ if __name__ == "__main__":
     if not source and not target:
         response = input("The object you are attempting to download is more than 40 gigabytes. Are you sure you want to download it (\"Y\" or \"N\")?
         if response in ["Y", "y", "yes", "Yes"]:
-            download_url("", "./")
+            download_url(base_url, "./")
         else:
             print("Dowload has been cancelled!")
             quit()

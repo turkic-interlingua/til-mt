@@ -91,7 +91,8 @@ fairseq-train \
     --eval-bleu-detok moses \
     --eval-bleu-remove-bpe \
     --eval-bleu-print-samples \
-    --best-checkpoint-metric bleu --maximize-best-checkpoint-metric
+    --best-checkpoint-metric bleu --maximize-best-checkpoint-metric \
+    --skip-invalid-size-inputs-valid-test
 ```
 9. Test your models
 ```
